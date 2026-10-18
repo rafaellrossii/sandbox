@@ -1,0 +1,16 @@
+{
+  "name": "sandboxes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "e2b.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "e2b": "^2.55.0"
+  }
+}

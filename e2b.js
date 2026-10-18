@@ -5,7 +5,7 @@
 // 8GB RAM max
 
 import { Sandbox } from "e2b";
-import "dotenv/config";
+// import "dotenv/config";
 
 const url = process.env.URL;
 const apiKey = process.env.E2B_API_KEY;
