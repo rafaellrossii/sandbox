@@ -1,0 +1,32 @@
+name: Node.js
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 */1 * * *"
+  push:
+    branches: ["main"]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      
+      - name: Instalar dependências do Node.js
+        run: npm update && npm install
+
+      - name: Executar script
+        env:
+          URL: ${{ secrets.URL }}
+          E2B_API_KEY: ${{ secrets.E2B_API_KEY }}
+        # timeout-minutes: 30
+        # continue-on-error: true
+        run: node e2b.js
