@@ -37,4 +37,5 @@ for (let i = 0; i < sandboxCount; i++) {
   } catch (e) {
     console.log(`Error - ${i + 1}`);
   }
+  await new Promise((r) => setTimeout(r, 2000)); 
 }
